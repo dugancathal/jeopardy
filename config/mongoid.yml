@@ -1,0 +1,19 @@
+development:
+  sessions:
+    default:
+      database: jeopardy_development
+      hosts:
+        - localhost:27017
+test:
+  sessions:
+    default:
+      database: jeopardy_test
+      hosts:
+        - localhost:27017
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      options:
+        skip_version_check: true
+        safe: true
